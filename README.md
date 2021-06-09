@@ -1,17 +1,18 @@
 # cordova-plugin-jitsi-meet
-Cordova plugin for jitsi meet native sdk
+Cordova plugin for jitsi meet native sdk. Works with both iOS and Android, and fixes the 64-bit binary dependency issue with Android found in previous versions of this plugin.
 
 ---
 
-## update note
+## Update note
 
-permision helper added ( for android ) 
+Permision helper added ( for android ) 
 
-## how to use
+## How to use
+
+```javascript
 
 let room_url = 'https://meet.jit.si/room_name';
 
-```javascript
 plugins.JitsiPlugin.loadURL(room_url, null, function(data) {
   if(data === "CONFERENCE_WILL_LEAVE"){
     plugins.JitsiPlugin.destroy( function(data) {
@@ -30,14 +31,14 @@ plugins.JitsiPlugin.loadURL(room_url, null, function(data) {
 
 ---
 
-## how to build for ionic
+## How to build for ionic
 
 ```bash
-ionic cordova plugin add https://github.com/sesangsokuro/cordova-plugin-jitsi-meet
+ionic cordova plugin add https://github.com/d-loki/cordova-plugin-jitsi-meet
 
 ionic cordova plugin add cordova-plugin-compat
 
 ( for cordova permision helper )
 
-ionic cordova build andorid
+ionic cordova build android
 ```
